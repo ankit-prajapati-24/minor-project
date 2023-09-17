@@ -118,9 +118,9 @@ if(changepasswordbtnmobile){
     containt.innerHTML = changepassword;
     setTimeout(() => {
          const list = close.classList;
-      list.toggle("active_nav");
-       list2.toggle("active_nav");
-        const list3 = mobile_nav.classList;
+  list.toggle("active_nav");
+  const list2 = open.classList;
+  list2.toggle("active_nav");
         list3.toggle("active_nav");
      }, 1000);
     // containtmobile.innerHTML = changepassword;
