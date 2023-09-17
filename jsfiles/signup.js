@@ -30,6 +30,7 @@ function signOut() {
 
   function onSignIn(googleUser) {
     // Retrieve user information
+    alert("on click ");
     var profile = googleUser.getBasicProfile();
     var email = profile.getEmail();
     var idToken = googleUser.getAuthResponse().id_token;
