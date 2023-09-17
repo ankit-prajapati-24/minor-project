@@ -12,12 +12,23 @@
   
 </head>
 <body>
-    <h1>Google Sign-In Example</h1>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div id="g_id_onload"
+     data-client_id="109968385356-bqvcsgicmde1julra5mijbnneb9v6vc7.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-login_uri="https://minor-project-tau.vercel.app/SignUp.html"
+     data-nonce=""
+     data-auto_prompt="false">
+</div>
 
-    <!-- Display user information -->
-    <p id="user-name"></p>
-    <p id="user-email"></p>
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="rectangular"
+     data-theme="outline"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left">
+</div>
       <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
         const clientId = "YOUR_CLIENT_ID.apps.googleusercontent.com";
@@ -35,23 +46,7 @@
             document.getElementById('user-email').textContent = 'Email: ' + email;
         }
     </script>
-      <script defer src="/your-path-to-fontawesome/js/all.js"></script> <!--load all styles -->
-  <script src="./jsfiles/index.js"></script>
-  <script src="./jsfiles//signup.js"></script>
-  <script type="module" src="./jsfiles/taoster.js"></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" > </script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-p34f1UUts3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx600ypYoCJhGGScy+8" 25 26
-    crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+  
  
 </body>
 </html>
