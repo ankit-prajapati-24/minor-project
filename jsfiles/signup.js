@@ -17,6 +17,7 @@
 //         window.location.href = "http://127.0.0.1:5500/index.html";
 //     });
 //  }
+alert("on click ");
 const id = "25830659239-085c4n7pb1jgksvu7i04jih6k035h462.apps.googleusercontent.com";
 const SECRET_KEY = "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";
 
