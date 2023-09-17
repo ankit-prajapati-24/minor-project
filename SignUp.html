@@ -17,12 +17,15 @@
       <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
         const clientId = "YOUR_CLIENT_ID.apps.googleusercontent.com";
-
+      console.log("hello ji nameste kese ho");
+        function callbaby(){
+            console.log("hello ji kese ho");
+        }
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
             var email = profile.getEmail();
             var userName = profile.getName();
-            alert("hello");
+            callbaby();
             // Display user information on the webpage
             document.getElementById('user-name').textContent = 'Name: ' + userName;
             document.getElementById('user-email').textContent = 'Email: ' + email;
