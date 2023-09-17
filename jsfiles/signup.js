@@ -39,6 +39,9 @@ function signOut() {
     // Send this data to your server for verification and user management.
     
     // Example: Display user information
+    ${"#firstname").text(profile.getName());
+      
+    ${"#email").text(email);
     console.log("User ID: " + profile.getId());
     console.log("Full Name: " + profile.getName());
     console.log("Email: " + email);
