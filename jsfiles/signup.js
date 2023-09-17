@@ -111,7 +111,7 @@ const removeToast = (toast) => {
     createToast("success");
     setTimeout(() => {
       
-window.location.href = "login.html";
+window.location.href = "https://ankit-prajapati-24.github.io/minor-project/Login.html?";
     }, 1000);
 
     console.log("hell oji");
