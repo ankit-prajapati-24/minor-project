@@ -5,20 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
   <meta name="google-signin-client_id" content="109968385356-bqvcsgicmde1julra5mijbnneb9v6vc7.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script>
-        const clientId = "YOUR_CLIENT_ID.apps.googleusercontent.com";
-
-        function onSignIn(googleUser) {
-            var profile = googleUser.getBasicProfile();
-            var email = profile.getEmail();
-            var userName = profile.getName();
-
-            // Display user information on the webpage
-            document.getElementById('user-name').textContent = 'Name: ' + userName;
-            document.getElementById('user-email').textContent = 'Email: ' + email;
-        }
-    </script>
+  
 </head>
 <body>
     <h1>Google Sign-In Example</h1>
@@ -27,5 +14,19 @@
     <!-- Display user information -->
     <p id="user-name"></p>
     <p id="user-email"></p>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        const clientId = "YOUR_CLIENT_ID.apps.googleusercontent.com";
+
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            var email = profile.getEmail();
+            var userName = profile.getName();
+            alert("hello");
+            // Display user information on the webpage
+            document.getElementById('user-name').textContent = 'Name: ' + userName;
+            document.getElementById('user-email').textContent = 'Email: ' + email;
+        }
+    </script>
 </body>
 </html>
