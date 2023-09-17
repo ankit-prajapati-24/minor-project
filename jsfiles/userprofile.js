@@ -93,6 +93,10 @@ if(updateprofilebtn || updateprofilebtnmobile){
 updateprofilebtnmobile.addEventListener('click', () =>{
     containt.innerHTML = initial;
     setTimeout(() => {
+         const list = close.classList;
+          list.toggle("active_nav");
+          const list2 = open.classList;
+          list2.toggle("active_nav");
         const list3 = mobile_nav.classList;
         list3.toggle("active_nav");
      }, 1000);
@@ -113,6 +117,9 @@ if(changepasswordbtnmobile){
     // containt.innerHTML = changepassword;
     containt.innerHTML = changepassword;
     setTimeout(() => {
+         const list = close.classList;
+      list.toggle("active_nav");
+       list2.toggle("active_nav");
         const list3 = mobile_nav.classList;
         list3.toggle("active_nav");
      }, 1000);
@@ -132,8 +139,12 @@ if(viewprofilebtnmobile){
     // containt.innerHTML = changepassword;
     containt.innerHTML = viewprofile;
      setTimeout(() => {
-        const list3 = mobile_nav.classList;
-        list3.toggle("active_nav");
+         const list = close.classList;
+          list.toggle("active_nav");
+          const list2 = open.classList;
+          list2.toggle("active_nav"); 
+            const list3 = mobile_nav.classList;
+            list3.toggle("active_nav");
      }, 1000);
     // containtmobile.innerHTML = viewprofile;
 })
