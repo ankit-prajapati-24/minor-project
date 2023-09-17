@@ -26,6 +26,29 @@
   <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+ <script>
+        const clientId = "25830659239-085c4n7pb1jgksvu7i04jih6k035h462.apps.googleusercontent.com";
+
+        function onSignIn(googleUser) {
+            // Retrieve user information
+            
+            var profile = googleUser.getBasicProfile();
+            var email = profile.getEmail();
+            var idToken = googleUser.getAuthResponse().id_token;
+
+            // Get user's name and profile image
+            var userName = profile.getName();
+            var profileImage = profile.getImageUrl();
+
+            // Display user information on the webpage
+            document.getElementById('firstname').textContent = 'Name: ' + userName;
+            document.getElementById('email').textContent = email;
+
+            // You can use 'email' and 'idToken' for authentication or other purposes.
+            // Send this data to your server for verification and user management.
+        }
+    </script>
+  
   <style>
     .primary-color {
       background-color: #001f3f;
