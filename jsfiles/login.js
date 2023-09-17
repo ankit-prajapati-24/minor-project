@@ -80,7 +80,9 @@ const removeToast = (toast) => {
     createToast("success");
     setTimeout(() => {
       
-window.location.href = "https://ankit-prajapati-24.github.io/minor-project/UserHome.html";
+// window.location.href = "https://ankit-prajapati-24.github.io/minor-project/UserHome.html";
+window.location.href = "UserHome.html";
+      
     }, 1000);
 
     console.log("hell oji");
