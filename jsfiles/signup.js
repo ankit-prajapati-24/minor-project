@@ -41,6 +41,7 @@ function signOut() {
     console.log("User ID: " + profile.getId());
     console.log("Full Name: " + profile.getName());
     console.log("Email: " + email);
+    window.location.href = "Login.html";
     
     // You can also sign the user out if needed
     // var auth2 = gapi.auth2.getAuthInstance();
