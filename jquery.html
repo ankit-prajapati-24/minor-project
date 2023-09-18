@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include jQuery library from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Include Tailwind CSS from a CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body.active{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+   <div class="w-screen h-screen flex justify-center items-center ">
+    <button id="btn" class="flex items-center justify-center">click me</button>
+    <input type="text" id="input" class="bg-gray-100 border-black border" value="">
+    <input type="file" name="img" id="uploadifile">
+    <div id="box" class="border border-black">
+          <img src="./assets/ap.jpg" class="h-[400px] w-[400px] object-cover">
+    </div>
+   </div>
+    <script>
+        // Make sure the DOM is ready before using jQuery
+        $(document).ready(function() {
+            // $("#btn").css("background-color", "red");
+            // $("#btn").click(()=>{
+            //     $("#box").toggle();
+            // })
+            // $("#btn").css("background-color", "red");
+
+
+
+            // $("#btn").change(()=>{
+            //     $("#box").toggle();
+            // $("div").slideToggle("slow");
+            // })
+
+
+            // const input = document.querySelector("#input");
+            // input.addEventListener("change", (e) => {
+            //     $("#box").text(e.target.value);
+            //     e.preventDefault();
+            //     console.log(e.target.value);
+            // });
+
+            // $("#input").change((e)=>{
+                //     $("#box").text(e.target.value);
+                // })
+                
+                // let text = $("#input").val();
+                // console.log(text);
+                // $("#box").text(text);
+                
+                let img = `<img src="./assets/ap.jpg" class="h-[400px] w-[400px] object-cover">`;
+
+            // $("#btn").click(1000,()=>{
+            //     $("#box").toggle(img);
+            //     $("body").toggleClass("active");
+            //     $("#btn").css("color","white");
+            // })
+            // 
+            // $("button").click(function(){
+                // $.get("http://localhost:4000/api/v1/profile/test", function(data, status){
+                    //     console.log(data,status);
+                    //     alert("Data: " + data.message + "\nStatus: " + status);
+                    // });
+                    // });
+                    
+                    
+                    $("#uploadifile").change((e) => {
+                        file = e.target.files[0];
+                    });
+
+                    $("button").click(function () {
+                        const data = new FormData();
+                        data.append("name", "ankit");
+                        data.append("img", file);
+
+                        const response = fetch("http://localhost:4000/api/v1/profile/test", {
+                            method: "POST",
+                            body: data, // Use FormData for file uploads
+                        });
+
+                        // You can handle the response here, such as checking for success or errors
+                        response
+                            .then((res) => {
+                                if (res.ok) {
+                                    return res.json();
+                                } else {
+                                    throw new Error("Network response was not ok");
+                                }
+                            })
+                            .then((data) => {
+                                
+                                console.log(data.url);
+
+                            })
+                            .catch((error) => {
+                                console.error("Error: ", error);
+                            });
+                    });
+
+        });
+    </script>
+</body>
+</html>
