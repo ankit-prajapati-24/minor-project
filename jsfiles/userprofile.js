@@ -149,7 +149,11 @@ $(document).ready(function() {
 
     $("#button").click(function () {
         if(!file) return;
+<<<<<<< HEAD
         $("#loader").toggle();
+=======
+        $("#loader").show();
+>>>>>>> 64822b137217153817e815bb6cbada7583818b50
         const data = new FormData();
         data.append("name", "ankit");
         data.append("img", file);
@@ -180,13 +184,21 @@ $(document).ready(function() {
                 if(menuprofile2){
                     menuprofile2.innerHTML = img;
                 }
+<<<<<<< HEAD
                 $("#loader").toggle(); 
+=======
+                $("#loader").hide(); 
+>>>>>>> 64822b137217153817e815bb6cbada7583818b50
                 createToast("success");                      
                 console.log(data.url);
 
             })
             .catch((error) => {
+<<<<<<< HEAD
                 $("#loader").toggle();  
+=======
+                $("#loader").hide();  
+>>>>>>> 64822b137217153817e815bb6cbada7583818b50
                 createToast("error");      
                 console.error("Error: ", error);
             });
@@ -305,4 +317,8 @@ close.addEventListener("click", () =>{
 
   // Make sure the DOM is ready before using jQuery
 
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> 64822b137217153817e815bb6cbada7583818b50
